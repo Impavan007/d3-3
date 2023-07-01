@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+    <link rel="stylesheet" href="./index.css">    
+    <title>heat-map</title>
+</head>
+<body>
+    <h1 id="title">
+        Monthly global temperature
+    </h1>
+    <p id="description"> temperature from 1753 to 2015</p>
+    <div id="tooltip">
+    </div>
+    <svg id="canvas"></svg>
+    <svg id="legend">
+        <g> 
+            <rect x="10" y="0" width="40" height="40" fill="SteelBlue" />
+            <text x="60" y="20" fill="white">Variance of -1 or less</text>
+
+        </g>
+        <g>
+            <rect x="10" y="40" width="40" height="40" fill="LightSteelBlue"/>
+            <text x="60" y="60" fill="white">on or Below Average</text>
+        </g>
+       <g>
+        <rect x="10" y="80" width="40" height="40" fill="Orange"/>
+            <text x="60" y="100" fill="white">Above Average</text>
+
+       </g>
+       <g>
+        <rect x="10" y="120" width="40" height="40" fill="Crimson"/>
+            <text x="60" y="140" fill="white">Variance of +1 or more</text>
+
+       </g>
+    </svg>
+    
+</body>
+<script src="./index.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
